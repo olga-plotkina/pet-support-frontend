@@ -12,8 +12,9 @@ export const NoticeInfo = ({ title, breed, location, birthday, price, category }
   return (
     <>
       <CardInfoWrapper>
+        <CardInfoTitle>{title}</CardInfoTitle>
         <CardInfoList>
-          <CardInfoTitle>{title}</CardInfoTitle>
+
           <CardInfoName>Breed:</CardInfoName>
           <CardInfoValue>{breed}</CardInfoValue>
           <CardInfoName>Place:</CardInfoName>
