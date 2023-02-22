@@ -4,7 +4,6 @@ import {
   CardInfoWrapper,
   CardInfoList,
   CardInfoTitle,
-  CardInfoField,
   CardInfoName,
   CardInfoValue,
 } from './NoticeInfo.styled';
@@ -15,23 +14,18 @@ export const NoticeInfo = ({ title, breed, location, birthday, price, category }
       <CardInfoWrapper>
         <CardInfoList>
           <CardInfoTitle>{title}</CardInfoTitle>
-          <CardInfoField>
-            <CardInfoName>Breed:</CardInfoName>
-            <CardInfoValue>{breed}</CardInfoValue>
-          </CardInfoField>
-          <CardInfoField>
-            <CardInfoName>Place:</CardInfoName>
-            <CardInfoValue>{location}</CardInfoValue>
-          </CardInfoField>
-          <CardInfoField>
-            <CardInfoName>Age:</CardInfoName>
-            <CardInfoValue>{birthday}</CardInfoValue>
-          </CardInfoField>
+          <CardInfoName>Breed:</CardInfoName>
+          <CardInfoValue>{breed}</CardInfoValue>
+          <CardInfoName>Place:</CardInfoName>
+          <CardInfoValue>{location}</CardInfoValue>
+          <CardInfoName>Age:</CardInfoName>
+          <CardInfoValue>{birthday}</CardInfoValue>
           {category === 'sell' && (
-            <CardInfoField>
+            <>
+              {' '}
               <CardInfoName>Price:</CardInfoName>
               <CardInfoValue>{price}</CardInfoValue>
-            </CardInfoField>
+            </>
           )}
         </CardInfoList>
       </CardInfoWrapper>

@@ -7,20 +7,21 @@ export const CardInfoWrapper = styled.div`
   @media (min-width: 768px) {
     padding-right: 85px;
   }
-  @media (min-width: 1280px)  {
+  @media (min-width: 1280px) {
     padding-right: 37px;
- }
+  }
 `;
 
-export const CardInfoList = styled.ul`
+export const CardInfoList = styled.div`
   list-style: none;
-  margin: 0;
-  padding: 0;
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: ${({ theme }) => theme.spacing[3]}px;
 `;
 
-export const CardInfoTitle = styled.li`
-font-family: ${props => props.theme.typography.font.primary};
+export const CardInfoTitle = styled.span`
+  font-family: ${props => props.theme.typography.font.primary};
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
