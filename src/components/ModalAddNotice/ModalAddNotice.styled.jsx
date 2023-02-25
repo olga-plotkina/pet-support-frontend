@@ -67,7 +67,7 @@ export const Title = styled.h1`
   line-height: 33px;
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
     left: 240px;
-    top: 30px;
+    top: 10px;
     font-size: 36px;
     line-height: 49px;
   }
@@ -77,128 +77,76 @@ export const P = styled.p`
   position: absolute;
   left: 10px;
   right: 10px;
-  top: 60px;
+  top: 130px;
   text-align: center;
   letter-spacing: -0.01em;
   color: ${props => props.theme.colors.black};
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
     left: 40px;
     top: 60px;
-   
   }
 `;
-export const Ferstbutton = styled.div`
-position: absolute;
-left: 50px;
-top: 600px;
-@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
-  left: 110px;
-  top: 650px;
-}
-`
-export const SecondButton = styled.div`
-position: absolute;
-left: 50px;
-top: 620px;
-@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
-  left: 110px;
-  top: 650px;
-}
-`
 
-export const ButtonCansel = styled.button`
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 40px;
-border: 2px solid #f59256;
-background: ${({ theme }) => theme.colors.white};
-color: #111111;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-font-family: 'Manrope';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 19px;
-width: 180px;
-height: 44px;
-margin-right: 10px;
+export const Categories = styled.div`
+  position: absolute;
+  top: 190px;
+  left: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  
+  gap: ${({ theme }) => theme.spacing[3]}px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+  }
+`;
+
+export const Category = styled.input`
+  display: none;
+`;
+export const CategoryWrap = styled.div`
+padding-left: 10px;
+padding-right: 10px;
+margin-left: 5px;
 margin-bottom: 10px;
-:hover {
-  :hover {
-    color: ${({ theme }) => theme.colors.black};
+display: inline-block;
+font-size: ${({ theme }) => theme.typography.size.xs};
+font-weight: ${({ theme }) => theme.typography.weight.medium};
+background-color: ${({ theme }) => theme.colors.white};
+color: ${({ theme }) => theme.colors.black};
+border: 2px solid ${({ theme }) => theme.colors.accent};
+border-radius: ${({ theme }) => theme.shape.borderRadius.l}px;
+
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.accent};
+  }
+  &:active {
+    background-color: ${({ theme }) => theme.colors.accent};
+  }
+  
+
+@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+  padding: 2px 20px;
+  margin-left: 10px;
+  font-size: ${({ theme }) => theme.typography.size.m};
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.accent};
+  }
+  &:active {
     background-color: ${({ theme }) => theme.colors.accent};
   }
 }
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
-    width: 180px;
-    height: 44px;
-    left: 100px;
-    top: 590px;
-    margin-right: 10px;
-  }
-`;
-
-export const ButtonNext = styled.button`
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 40px;
-border: 2px solid #f59256;
-background: ${({ theme }) => theme.colors.white};
-color: #111111;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-font-family: 'Manrope';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 19px;
-width: 180px;
-height: 44px;
-:hover {
-  color: ${({ theme }) => theme.colors.black};
-  background-color: ${({ theme }) => theme.colors.accent};
 }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
-    width: 180px;
-    height: 44px;
-    left: 320px;
-    top: 590px;
-  }
-`;
-
-export const CloseModalButton = styled.button`
-  cursor: pointer;
-  position: absolute;
-  top: 30px;
-  left: 230px;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  z-index: 10;
-  border-radius: 50%;
-  background: ${props => props.theme.colors.white};
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
-    top: 10px;
-    left: 540px;
-    width: 38px;
-    height: 38px;
-  }
 `;
 
 export const FerstForm = styled.form`
   width: 240px;
   left: 20px;
-  top: 250px;
+  top: 280px;
   position: absolute;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
@@ -213,7 +161,6 @@ export const SecondForm = styled.form`
   left: 20px;
   top: 250px;
   position: absolute;
-
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
     width: 448px;
     left: 80px;
@@ -263,67 +210,164 @@ export const Label = styled.label`
   }
 `;
 
-export const Categories = styled.div`
+export const Ferstbutton = styled.div`
   position: absolute;
-  top: 120px;
-  left: 20px;
-  gap: ${({ theme }) => theme.spacing[3]}px;
+  left: 50px;
+  top: 610px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
-    position: absolute;
-    top: 100px;
+    left: 110px;
+    top: 650px;
+  }
+`;
+export const SecondButton = styled.div`
+  position: absolute;
+  left: 50px;
+  top: 650px;
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+    left: 110px;
+    top: 650px;
+  }
+`;
+
+export const ButtonCansel = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  border: 2px solid #f59256;
+  background: ${({ theme }) => theme.colors.white};
+  color: #111111;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 19px;
+  width: 180px;
+  height: 44px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  :hover {
+    :hover {
+      color: ${({ theme }) => theme.colors.black};
+      background-color: ${({ theme }) => theme.colors.accent};
+    }
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+    width: 180px;
+    height: 44px;
     left: 100px;
+    top: 590px;
+    margin-right: 10px;
   }
 `;
 
-export const Category = styled.input`
-display: none;
+export const ButtonNext = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  border: 2px solid #f59256;
+  background: ${({ theme }) => theme.colors.white};
+  color: #111111;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 19px;
+  width: 180px;
+  height: 44px;
+  :hover {
+    color: ${({ theme }) => theme.colors.black};
+    background-color: ${({ theme }) => theme.colors.accent};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+    width: 180px;
+    height: 44px;
+    left: 320px;
+    top: 590px;
+  }
 `;
-export const CategoryWrap = styled.div`
-padding: 2px 20px;
-margin-left: 5px;
-display: inline-block;
-font-size: ${({ theme }) => theme.typography.size.xs};
-font-weight: ${({ theme }) => theme.typography.weight.medium};
-background-color: ${({ theme }) => theme.colors.white};
-color: ${({ theme }) => theme.colors.black};
-border: 2px solid ${({ theme }) => theme.colors.accent};
-border-radius: ${({ theme }) => theme.shape.borderRadius.l}px;
 
+export const CloseModalButton = styled.button`
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: 230px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  z-index: 10;
+  border-radius: 50%;
+  background: ${props => props.theme.colors.white};
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+    top: 10px;
+    left: 540px;
+    width: 38px;
+    height: 38px;
+  }
+`;
 
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.accent};
-  }
-  &:active {
-    background-color: ${({ theme }) => theme.colors.accent};
-  }
-  
-
-@media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
-  padding: 2px 20px;
-  margin-left: 10px;
-  font-size: ${({ theme }) => theme.typography.size.m};
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.accent};
-  }
-  &:active {
-    background-color: ${({ theme }) => theme.colors.accent};
-  }
-}
-}
-`
 export const GenderWrapper = styled.div`
   display: flex;
   position: absolute;
-  top: 80px;
-  left: 60px
+  top: 150px;
+  margin-left: 100px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+    top: 100px;
+    left: 50px;
+  }
+`;
+export const GenderTitle = styled.p`
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
+    top: 75px;
+    left: 70px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+  }
 `;
 export const GenderItem = styled.div`
   width: 36px;
   hight: 36px;
-  margin-left: 80px;
+  margin-right: 60px;
 `;
 export const GenderLabel = styled.label`
+  color: ${({ theme }) => theme.colors.black};
+`;
+
+export const GenderP = styled.p`
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #000000;
   color: ${({ theme }) => theme.colors.black};
   &:hover {
     color: ${({ theme }) => theme.colors.accent};
@@ -333,24 +377,25 @@ export const GenderLabel = styled.label`
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet[0]}) {
     &:hover {
-     color: ${({ theme }) => theme.colors.accent};
+      color: ${({ theme }) => theme.colors.accent};
     }
     &:active {
       color: ${({ theme }) => theme.colors.accent};
     }
-    }
-  
+  }
 `;
-
-export const GenderP = styled.p``;
 export const GenderInput = styled.input`
   display: none;
 `;
+
 export const FileBox = styled.div`
   width: 140px;
   height: 140px;
   background: #fdf7f2;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 export const Comments = styled.textarea`
   width: 100%;
@@ -373,7 +418,6 @@ export const Comments = styled.textarea`
     padding-left: 10px;
   }
 `;
-
 
 export const GlobalStyle = createGlobalStyle`
 box-sizing: border-box;

@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { addNotice } from '../../redux/notices/operations';
 import { CloseModalIcon } from '../icons/CloseModalIcon';
-import { MalePetIcon } from '../icons/MalePetIcon';
+// import { MalePetIcon } from '../icons/MalePetIcon';
 import { AddPhotoOfPetIcon } from '../icons/AddPhotoOfPetIcon';
 import { FemalePetIcon } from '../icons/FemalePetIcon';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
@@ -23,6 +23,7 @@ import {
   Categories,
   Category,
   GenderWrapper,
+  GenderTitle,
   GenderItem,
   GenderInput,
   GenderP,
@@ -123,6 +124,9 @@ export const ModalAddNotice = ({ showModal, setShowModal }) => {
               <ModalContent>
                 <Title> Add Pet</Title>
                 <P>Enter information about your pet. All fields are required</P>
+
+                <Title> Add Pet</Title>
+                <P>Enter information about your pet. All fields are required</P>
                 <Categories>
                   <label>
                     <CategoryWrap>lost/found</CategoryWrap>
@@ -210,8 +214,6 @@ export const ModalAddNotice = ({ showModal, setShowModal }) => {
                 <CloseModalButton area-label="Close modal" onClick={closeModal}>
                   <CloseModalIcon color={'black'} />
                 </CloseModalButton>
-
-                <CloseModalIcon />
               </ModalContent>
             </FerstModalWrapper>
           )}
@@ -219,10 +221,12 @@ export const ModalAddNotice = ({ showModal, setShowModal }) => {
             <SecondModalWrapper>
               <ModalContent>
                 <Title> Add Pet</Title>
+                <GenderTitle >The Sex*:</GenderTitle>
                 <GenderWrapper>
+                  
                   <GenderItem>
                     <GenderLabel>
-                      <MalePetIcon />
+                      <FemalePetIcon />
                       <GenderP>Male</GenderP>
                       <GenderInput
                         type="radio"
