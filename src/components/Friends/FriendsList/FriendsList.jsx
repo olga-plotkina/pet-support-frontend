@@ -42,7 +42,7 @@ const FriendsList = () => {
         )}
         {friends.length === 0 && !isLoading && (
           <div>
-            <ErrorTitle> Ooops, something went wrong, try reloading the page </ErrorTitle>
+            <ErrorTitle> Ooops, something went wrong, try reloading the page... </ErrorTitle>
             <NotFound />
           </div>
         )}
