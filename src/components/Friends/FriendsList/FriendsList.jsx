@@ -1,4 +1,4 @@
-import { TitleFriends, List, ErrorTitle } from './FriendsList.styled';
+import { ErrorTitle, List, TitleFriends } from './FriendsList.styled';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -42,7 +42,7 @@ const FriendsList = () => {
         )}
         {friends.length === 0 && !isLoading && (
           <div>
-            <ErrorTitle> Ooops, something went wrong, try reloading the page... </ErrorTitle>
+            <ErrorTitle> Ooops, something went wrong, try reloading the page </ErrorTitle>
             <NotFound />
           </div>
         )}
