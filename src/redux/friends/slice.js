@@ -16,6 +16,7 @@ const friendsSlice = createSlice({
       .addCase(fetchFriends.fulfilled, (state, action) => {
         state.isLoading = false;
         state.items = action.payload;
+        state.isLoading = false;
       })
       .addCase(fetchFriends.pending, state => {
         state.isLoading = true;
